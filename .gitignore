@@ -1,0 +1,5 @@
+# game builds too large for github uploads
+# github Large File Storage breaks game builds
+/assets/project/Gravity/
+/assets/project/Halloween-Hustle/
+/assets/project/Zelda/

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>EECS Mini Golf Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div 
+      id="portfolio-details" 
+      class="portfolio-details" 
+    >
+      <div class="container">
+        <div class="row mb-xl-4 mb-5">
+          <h2 class="portfolio-title">EECS Mini Golf </h2> <!--title-->
+
+          <!--carousel-->
+          <div class="col-xl-8 col-12">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/golf/183showcase-cropped-edit.png" alt="" >
+                </div>
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/golf/arduinoIDE-edit.png" alt="" >
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div> <!--carousel-->
+
+          <!--Overview-->
+          <div class="col-xl-4 col-12 portfolio-info ">
+            <h3 class="card-title fw-bold">Project Overview</h3>
+            <p style="font-style: italic;" class="mb-2">
+              This project was the J.P. Morgan Chase winner at the EECS 183 showcase of Winter 2019. EECS Mini Golf is an arduino arcade game played on a 32x16 arduino LED board.  There are 9 holes featuring a combination of obstacles, water hazards, sandtraps, and ball tunnels.
+              The player uses two potentiometers to control the direction and the power of a swing. There is a red guide that indicates the current direction and power level of the player's input. 
+              When content with the potentiometers, the player presses a button to strike the ball.                  
+            </p>
+            <p class="mt-0" style="font-style: italic;">
+              Unfortunately the game can only be played with an Arduino Uno and an RGB LED Matrix as of now; however, I plan to build a JavaScript simulation for live demos.
+            </p>
+
+            <p><span><strong>Date: </strong></span>Winter 2019</p>
+
+            <div class="portfolio-details-links"> <!--action buttons-->
+              <a href="https://github.com/tmachnacki/arduino-mini-golf" title="Code Repository"><i class="bx bx-code-alt"></i></a>
+            </div>
+          </div><!--overview col-->
+        </div> <!--end top row-->
+
+        <!--information-->
+        <div class="row">
+          <div class="col-xl-8 col-12 portfolio-info portfolio-details-section">
+            <h4>Project Role</h4>
+            <p>
+              I was responsible for implementing the majority of core functionality and gameplay mechanics. This included using a cartesian coordinate system to handle the underlying object positions and physics of the game. This also included collision detection among objects and the inherent physics of objects colliding. Furthermore, I implemented the obstacles, sand traps, water hazards, and ball tunnels.  If the ball hits a sand trap it will be slowed and if it touches the water the player incurs a stroke penalty. The ball tunnels have different colored lights to indicate the entrance and exit. The ball will take the tunnel to the exit and continue and the speed it entered. I implemented the red guide to improve the learnability for the controls and user interface. In addition, I helped with level design, drawing out holes on graph paper with another group member.
+            </p>
+          </div>
+          
+          <div class="col-12 portfolio-info portfolio-details-section">
+              <h4>Relevant Technology</h4>
+              <ul class="details-tech">
+                <li>Arduino Uno</li> 
+                <li>Arduino IDE</li>
+                <li>C++</li>
+                <li>RGB Matrix LED Board</li>
+              </ul>
+          </div>
+        
+          <div class="col-12 portfolio-info portfolio-details-section">
+              <h4>Relevant Skills</h4>
+              <ul class="details-skills">
+                <li>Object Oriented Programming</li>
+                <li>Game Design</li>
+                <li>Level Design</li>
+                <li>Project Presentation</li>
+                <li>Team Coordination and Communication</li>
+              </ul>
+          </div>
+        </div> <!--end bottom row information-->
+      </div> <!--end container-->
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

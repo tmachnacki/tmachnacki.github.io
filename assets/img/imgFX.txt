@@ -1,0 +1,5 @@
+img fx chain:
+
+contrast 100
+exposure 0
+last -50

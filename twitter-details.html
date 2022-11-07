@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Twitter Sentiment Analyzer Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <!-- ======= Portfolio Details ======= -->
+    <div 
+      id="portfolio-details" 
+      class="portfolio-details"
+    >
+      <div class="container">
+        <div class="row mb-xl-4 mb-5">
+          <h2 class="portfolio-title">Twitter Sentiment Analyzer</h2> <!--title-->
+
+          <!--carousel-->
+          <div class="col-xl-8 col-md-12">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/twitter/home.png" alt="" >
+                </div>
+
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/twitter/results.png" alt="" >
+                </div>
+
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/twitter/about.png" alt="" >
+                </div>
+
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/twitter/writeup.png" alt="" >
+                </div>
+
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/twitter/poster.png" alt="" >
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div> <!--end caruosel-->
+
+          <!--Overview-->
+          <div class="col-xl-4 col-12 portfolio-info ">
+            <h3 class="card-title fw-bold">Project Overview</h3>
+            <p style="font-style: italic;" class="mb-2">
+              Companies are often concerned with public perception regarding their products, especially following a product launch or marketing campaign. 
+              As such, we created a system that can retrieve recent tweets about a specific topic such as a company or product. 
+              The system then performs sentiment analysis on the tweets using PySentimiento's BERT-base model in conjunction with a Twitter-specific tokenizer. 
+              The tweets are then classified as positive or negative and the results are charted, so businesses/companies can quickly, easily, and cheaply evaluate public sentiment trends.
+            </p>
+            <p class="mt-0" style="font-style: italic;">
+              Moreover, this project was predacated on the results of our research, testing, and implementation of various combinations of features and classifiers to perform sentiment analysis.
+              In short, we trained and tested combinations of [TF, TF-IDF, and BERT-emeddings] as features and [Naive Bayes, Linear SVM, and Logistic Regression] as classifiers.
+              We found BERT models significantly outperformed others, so we used PySentimiento for our web app, as it was inexpensive and effecient. For further details please view the written report and poster. 
+            </p>
+           
+            <p><span><strong>Date: </strong></span>Winter 2021</p>
+
+            <div class="portfolio-details-links"> <!--action buttons-->
+              <a href="https://github.com/tmachnacki/twitter-sentiment" title="Code Repository"><i class="bx bx-code-alt"></i></a>
+              <a href="http://ec2-44-211-216-40.compute-1.amazonaws.com/" title="Live Demo"><i class="bx bx-podcast"></i></a>
+              <a href="./assets/project/twitter-sentiment/FinalReportFormat.pdf" title="Written Report"><i class='bx bxs-file'></i></a>
+              <a href="./assets/project/twitter-sentiment/EECS 486 Final Poster.pdf" title="Poster"><i class='bx bxs-file-image'></i></a>
+            </div>
+          </div><!--overview col-->
+        </div> <!--end top row-->
+
+        <!--information-->
+      <!--
+        <div class="row">
+          <div class="col-lg-4 col-md-6 col-12 portfolio-info portfolio-details-section">
+            <h4>Team Members</h4>
+            <ul class="details-team">
+              <li>Timothy Machnacki <span> | </span> tmachnac@umich.edu</li>
+              <li>Jasper Drumm <span> | </span> jasperd@umich.edu</li>
+            </ul>
+          </div>
+        </div>
+      -->
+
+        <div class="row">
+          <div class="col-xl-8 col-12 portfolio-info portfolio-details-section">
+            <h4>Project Role</h4>
+            <p>
+              I worked in tandum with another group member to develop and implement the web app and all its core functionality. This included the Flask app routes, Twitter API functionality, PySentimiento functionality, and data plots.
+              Furthermore, I added all CSS using bootstrap as the original app was barebones HTML. I also added an "About" page to provide a project summary as well as instructions to users.
+              In addition, I worked alongside group members to contribute to the training of our models in a lesser capacity. Lastly, I was responsible for the plurality of the work for the poster and written report.
+            </p>
+          </div>
+          
+          <div class="col-12 portfolio-info portfolio-details-section">
+              <h4>Relevant Technology</h4>
+              <ul class="details-tech">
+                <li>Python</li> 
+                <li>Matplotlib</li>
+                <li>Scikit-learn</li>
+                <li>Naive Bayes</li>
+                <li>Linear SVM</li>
+                <li>Logistic Regression</li>
+                <li>PySentimiento</li>
+                <li>Flask</li>
+                <li>Twitter API</li>
+                <li>HTML</li>
+                <li>Bootstrap</li>
+                <li>CSS</li>
+              </ul>
+          </div>
+        
+          <div class="col-12 portfolio-info portfolio-details-section">
+              <h4>Relevant Skills</h4>
+              <ul class="details-skills">
+                <li>Information Retrieval</li>
+                <li>Natural Language Processing</li>
+                <li>APIs</li>
+                <li>Dynamic server-side rendering</li>
+                <li>Project presentation</li>
+                <li>Formal writing</li>
+                <li>Git collaboration and version control</li>
+              </ul>
+          </div>
+        </div> <!--end bottom row information-->
+      </div> <!--end container-->
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

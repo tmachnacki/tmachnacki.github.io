@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>CourseWork Calculator Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!--Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <main id="main">
+
+    <div 
+      id="portfolio-details" 
+      class="portfolio-details" 
+    >
+      <div class="container">
+        <div class="row mb-xl-4 mb-5">
+          <h2 class="portfolio-title">CourseWork Calculator </h2> <!--title-->
+
+          <!--carousel-->
+          <div class="col-xl-8 col-12">
+            <div class="portfolio-details-slider swiper">
+              <div class="swiper-wrapper align-items-center">
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/CC/CC-home.png" alt="">
+                </div>
+                <div class="swiper-slide">
+                  <img class="img-fluid" src="assets/img/portfolio/CC/CC-results.png" alt="">
+                </div>
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+          </div> <!--carousel-->
+
+          <!--Overview-->
+          <div class="col-xl-4 col-12 portfolio-info ">
+            <h3 class="card-title fw-bold">Project Overview</h3>
+            <p style="font-style: italic;" class="mb-2">
+              CourseWork Calculator is a single-page web app built for students choosing which courses to enroll in at the University of Michigan.
+              My group and I built a selenium web-crawler to scrape data such as median grade, credit hours, and student-reported workload from U of M's Atlas Course Profiles.
+              We then stored this data in an sqlite3 database in the backend of the application. A Flask REST API was used to send data from the database to the frontend.
+              Said frontend utilized the Vue framework as well as Vuetify for styling. A user can search for different courses, add them to their backpack and/or schedule then get an hours-per-week estimate for their given schedule.                 
+            </p>
+          
+            <p><span><strong>Date: </strong></span>Winter 2021</p>
+
+            <div class="portfolio-details-links"> <!--action buttons-->
+              <a href="https://github.com/tmachnacki/coursework-calculator" title="Code Repository"><i class="bx bx-code-alt"></i></a>
+              <a href="" title="Live Demo"><i class="bx bx-podcast"></i></a>
+            </div>
+          </div><!--overview col-->
+        </div> <!--end top row-->
+
+        <!--information-->
+        <div class="row">
+          <div class="col-xl-8 col-12 portfolio-info portfolio-details-section">
+            <h4>Project Role</h4>
+            <p>
+              I implemented the vast majority of the Vue functionality, Vuetify styling, and API routes. I was also in charge of presenting our prototype application to instructors.
+              Furthermore, I also helped develop the web-scraper but in a much lesser capacity.
+            </p>
+          </div>
+          
+          <div class="col-12 portfolio-info portfolio-details-section">
+              <h4>Relevant Technology</h4>
+              <ul class="details-tech">
+                <li>Python</li>
+                <li>Selenium</li>
+                <li>Beautiful Soup</li>
+                <li>sqlite3</li>
+                <li>Flask</li>
+                <li>Vue JS</li>
+                <li>JavaScript</li>
+                <li>Vuetify</li>
+                <li>HTML</li>
+                <li>CSS</li>
+              </ul>
+          </div>
+        
+          <div class="col-12 portfolio-info portfolio-details-section">
+              <h4>Relevant Skills</h4>
+              <ul class="details-skills">
+                <li>Web-scraping</li>
+                <li>Browser automation</li>
+                <li>Relational database management</li>
+                <li>REST APIs</li>
+                <li>Dynamic client-side rendering</li>
+                <li>Full-stack development</li>
+                <li>Single page application development</li>
+                <li>Git collaboration and version control</li>
+                <li>Project presentation</li>
+              </ul>
+          </div>
+        </div> <!--end bottom row information-->
+      </div> <!--end container-->
+    </div><!-- End Portfolio Details -->
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
