@@ -7,9 +7,15 @@ body {
   color: #fff;
   position: relative;
   background: transparent;
-  --color-primary: #7E57C2; /* #18d26e */
-  --color-lighter: #9575CD; /* #35e888 */
-  --color-lightest: #B39DDB; /* #63eda3 */
+  --color-primary: #7E57C2; 
+  --color-lighter: #9575CD; 
+  --color-lightest: #B39DDB; 
+  /* 
+  green: 
+  #18d26e 
+  #35e888 
+  #63eda3
+  */
 }
 body::before {
   content: "";
@@ -78,7 +84,7 @@ h1, h2, h3, h4, h5, h6 {
 #header h2 .my-title {
   color: #fff;
   border-bottom: 2px solid var(--color-primary);
-  padding-bottom: 6px;
+  padding-bottom: 2px;
 }
 #header img {
   padding: 0;
@@ -1114,30 +1120,9 @@ section .container {
 }
 
 /*--------------------------------------------------------------
-# Credits
+# Modal
 --------------------------------------------------------------*/
-.credits {
-  position: fixed;
-  right: 0;
-  left: 0;
-  bottom: 0;
-  padding: 15px;
-  text-align: right;
-  font-size: 13px;
-  color: #fff;
-  z-index: 999999;
-}
-@media (max-width: 992px) {
-  .credits {
-    text-align: center;
-    padding: 10px;
-    background: rgba(0, 0, 0, 0.8);
-  }
-}
-.credits a {
-  color: var(--color-primary);
-  transition: 0.3s;
-}
-.credits a:hover {
-  color: #fff;
+
+#permissionModal  #requestBtn {
+  background-color: var(--color-primary);
 }

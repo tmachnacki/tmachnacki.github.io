@@ -260,20 +260,37 @@
   });
 
   /**
-   * type effect
-   */
-   const typed = select('.typed')
-   if (typed) {
-     let typed_strings = typed.getAttribute('data-typed-items')
-     typed_strings = typed_strings.split(',')
-     new Typed('.typed', {
-       strings: typed_strings,
-       loop: true,
-       typeSpeed: 100,
-       backSpeed: 50,
-       backDelay: 2000
-     });
-   }
+  * type effect
+  */
+  const typed = select('.typed')
+  if (typed) {
+    let typed_strings = typed.getAttribute('data-typed-items')
+    typed_strings = typed_strings.split(',')
+    new Typed('.typed', {
+      strings: typed_strings,
+      loop: true,
+      typeSpeed: 100,
+      backSpeed: 50,
+      backDelay: 2000
+    });
+  }
+
+  /** 
+  * permission modal
+  */
+  let closeBtn = document.getElementById('closeBtn');
+  let modalTriggers = document.getElementsByClassName('modal-trigger');
+  console.log(modalTriggers);
+
+  let continueBtn = document.getElementById('continueBtn');
+
+  modalTriggers.forEach(e => e.addEventListener('click', function() {
+      console.log(e.dataset.url.toString());
+      continueBtn.setAttribute('href', e.dataset.url.toString());
+    }
+  ));
+
+
 
 })()
 

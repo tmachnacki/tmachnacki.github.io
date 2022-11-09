@@ -81,21 +81,13 @@
               Ask485 is a scalable search engine similar to Google or Bing. 
               A pipeline of hadoop MapReduce programs is used to produce an inverted index of web pages. The MapReduce pipeline receives documents tupled with their document IDs and document titles in a CSV file. 
               An inverted index is produced with each entry containing the term and respective inverse document frequency followed by a partition of three elements: a document ID in which the term appears, the frequency of the term in said document, and the normalization factor for the document.
+              The index server is a REST API that returns search results in JSON format for the front-end to use. The server retrieves "hits" and ranks documents based on the weighted linear combination of two factors: the query-dependent tf-idf score, and the query-independent PageRank score.
+              The weight of the PageRank score is a parameter specified by the user. The "search" server uses flask and jinja2 templates to display search results in a manner similar to mainstream search engines.
             </p>
-
-            <p>
-              One can create an account or use my account's admin credentials to sign in to the web app:
-              <ul>
-                <li><strong>Username</strong>: tmachnac</li>
-                <li><strong>Password</strong>: password</li>
-              </ul>
-            </p>
-           
             <p><span><strong>Date: </strong></span>Winter 2021</p>
 
             <div class="portfolio-details-links"> <!--action buttons-->
-              <a href="https://github.com/tmachnacki/insta" title="Code Repository"><i class="bx bx-code-alt"></i></a>
-              <a href="http://ec2-44-212-2-242.compute-1.amazonaws.com" title="Live Demo"><i class="bx bx-podcast"></i></a>
+              <a href="" title="Code Repository"><i class="bx bx-code-alt"></i></a>
             </div>
           </div><!--overview col-->
         </div> <!--end top row-->
