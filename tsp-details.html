@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>InstaSham Details</title>
+  <title>Drone Delivery Details</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -40,34 +40,27 @@
     >
       <div class="container">
         <div class="row mb-xl-4 mb-5">
-          <h2 class="portfolio-title">InstaSham</h2> <!--title-->
+          <h2 class="portfolio-title">Drone Delivery</h2> <!--title-->
 
           <!--carousel-->
           <div class="col-xl-8 col-md-12">
             <div class="portfolio-details-slider swiper">
               <div class="swiper-wrapper align-items-center">
+
                 <div class="swiper-slide">
-                  <img class="img-fluid" src="assets/img/portfolio/insta/insta-index.png" alt="" >
+                  <img class="img-fluid" src="assets/img/portfolio/TSP/MST-c-edit.png" alt="" >
                 </div>
 
                 <div class="swiper-slide">
-                  <img class="img-fluid" src="assets/img/portfolio/insta/insta-profile.png" alt="" >
+                  <img class="img-fluid" src="assets/img/portfolio/TSP/FASTTSP-c-edit.png" alt="" >
                 </div>
 
                 <div class="swiper-slide">
-                  <img class="img-fluid" src="assets/img/portfolio/insta/insta-explore.png" alt="" >
+                  <img class="img-fluid" src="assets/img/portfolio/TSP/OPTSP-c-edit.png" alt="" >
                 </div>
 
                 <div class="swiper-slide">
-                  <img class="img-fluid" src="assets/img/portfolio/insta/insta-post.png" alt="" >
-                </div>
-
-                <div class="swiper-slide">
-                  <img class="img-fluid" src="assets/img/portfolio/insta/insta-edit.png" alt="" >
-                </div>
-
-                <div class="swiper-slide">
-                  <img class="img-fluid" src="assets/img/portfolio/insta/insta-login.png" alt="" >
+                  <img class="img-fluid" src="assets/img/portfolio/TSP/TSP-ide.png" alt="" >
                 </div>
               </div>
               <div class="swiper-pagination"></div>
@@ -76,26 +69,31 @@
 
           <!--Overview-->
           <div class="col-xl-4 col-12 portfolio-info ">
-            <h3 class="card-title fw-bold">Project Overview</h3>
-            <p style="font-style: italic;" class="mb-2">
-              Ask485 is a scalable search engine similar to Google or Bing. 
-              A pipeline of hadoop MapReduce programs is used to produce an inverted index of web pages. The MapReduce pipeline receives documents tupled with their document IDs and document titles in a CSV file. 
-              An inverted index is produced with each entry containing the term and respective inverse document frequency followed by a partition of three elements: a document ID in which the term appears, the frequency of the term in said document, and the normalization factor for the document.
+            <h3 class="card-title fw-bold ">Project Overview</h3>
+            <p style="font-style: italic;" class="mb-1">
+              This command line program implements various graph algorithms. It first receives a list of (x,y) coordinates from standard input then produces a solution depending on the mode specified by the user:
             </p>
 
-            <p>
-              One can create an account or use my account's admin credentials to sign in to the web app:
-              <ul>
-                <li><strong>Username</strong>: tmachnac</li>
-                <li><strong>Password</strong>: password</li>
-              </ul>
+            <p class="mb-1">
+              <strong style="color: var(--color-lighter);">MST</strong>: <span style="font-style: italic;">The program uses Prim's algorithm to construct a minimum spanning tree. It then outputs the total weight of the tree and a list of edges.</span>
             </p>
-           
-            <p><span><strong>Date: </strong></span>Winter 2021</p>
 
-            <div class="portfolio-details-links"> <!--action buttons-->
+            <p class="mb-1">
+              <strong style="color: var(--color-lighter);">FASTTSP</strong>: <span style="font-style: italic;">The program uses an arbitrary approximation algorithm to create an upper-bound heuristic for the optimal traveling sales person route to use. I chose to implement a greedy nearest neighbor algorithm. The program outputs the total length of the tour followed by the nodes in the order they were visited.</span>
+            </p>
+
+            <p class="mb-2">
+              <strong style="color: var(--color-lighter);">OPTTSP</strong>: <span style="font-style: italic;" >The program uses the "FASTTSP" algorithm to find and output the optimal tour using a branch and bound approach.</span>
+            </p>  
+
+            <p class="mb-2"><span><strong>Date: </strong></span>Winter 2020</p>
+            
+            <p class="mb-2">For more details read the original spec attached below</p>
+
+            <!--action buttons-->
+            <div class="portfolio-details-links"> 
               <a href="https://github.com/tmachnacki/insta" title="Code Repository"><i class="bx bx-code-alt"></i></a>
-              <a href="http://ec2-44-212-2-242.compute-1.amazonaws.com" title="Live Demo"><i class="bx bx-podcast"></i></a>
+              <a href="./assets/project/EECS-281/Project4_W20.pdf" title="Original Spec"><i class='bx bxs-detail'></i></a>
             </div>
           </div><!--overview col-->
         </div> <!--end top row-->
@@ -105,45 +103,30 @@
           <div class="col-xl-8 col-12 portfolio-info portfolio-details-section">
             <h4>Project Role</h4>
             <p>
-              My fellow two group members and I contributed roughly equally to the core functionality of the web application.
-              We often worked collectively on a given route or page but would also divide and conquer when appropriate. However,
-              I have made many changes to the original project. The original project specification did not call for any CSS, so
-              I have implemented all CSS on the current web app. Furthermore, I added many features that were not present in the
-              original specification such as suggested users, a "create post" modal, navigation, and a "more from user" gallery section.
+              As this was an individual assignment, I was reponsible for all implementation details, maintenance, version control, and functionality.
             </p>
           </div>
           
           <div class="col-12 portfolio-info portfolio-details-section">
               <h4>Relevant Technology</h4>
               <ul class="details-tech">
-                <li>Python</li> 
-                <li>sqlite3</li>
-                <li>Flask</li>
-                <li>Jinja2</li>
-                <li>ReactJS</li>
-                <li>Selenium testing</li>
-                <li>JavaScript</li>
-                <li>MDBootstrap</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Pylint</li>
-                <li>ESlint</li>
-                <li>Curl</li>
-                <li>HTTPie</li>
+                <li>C++</li> 
+                <li>Minimum spanning trees</li>
+                <li>Prim's algorithm</li>
+                <li>Tours</li>
+                <li>Greedy nearest neighbor</li>
+                <li>Branch and bound</li>
+                <li>Graph algorithms</li>
               </ul>
           </div>
         
           <div class="col-12 portfolio-info portfolio-details-section">
               <h4>Relevant Skills</h4>
               <ul class="details-skills">
-                <li>Relational database management</li>
-                <li>User authentication (SHA + salting)</li>
-                <li>UUID file encoding</li>
-                <li>REST APIs</li>
-                <li>Dynamic server-side rendering</li>
-                <li>Dynamic client-side rendering</li>
-                <li>Full-stack development</li>
-                <li>Git collaboration and version control</li>
+                <li>Time complexity efficiency</li>
+                <li>Independent development</li>
+                <li>Version control</li>
+                <li>Heuristics</li>
               </ul>
           </div>
         </div> <!--end bottom row information-->
