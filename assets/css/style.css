@@ -334,14 +334,16 @@ section .container {
   text-transform: uppercase;
   color: #aaaaaa;
   font-family: "Poppins", sans-serif;
+  transition: all ease-in-out 0.2s;
 }
 .section-title h2::after {
   content: "";
-  width: 120px;
+  width: 110px;
   height: 1px;
   display: inline-block;
   background: var(--color-primary);
   margin: 4px 10px;
+  transition: all ease-in-out 0.2s;
 }
 .section-title p {
   margin: 0;
@@ -351,6 +353,22 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  transition: all ease-in-out 0.2s;
+}
+
+@media (max-width: 575.99px) {
+  .section-title p {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 399.99px) {
+  .section-title p {
+    font-size: 18px;
+  }
+  .section-title h2::after {
+    width: 90px;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -360,6 +378,7 @@ section .container {
   font-weight: 700;
   font-size: 26px;
   color: var(--color-primary);
+  transition: all ease-in-out 0.2s;
 }
 .about-me .content ul {
   list-style: none;
@@ -369,15 +388,22 @@ section .container {
   margin-bottom: 20px;
   display: flex;
   align-items: center;
-}
-.about-me .content ul strong {
-  margin-right: 10px;
+  transition: all ease-in-out 0.2s;
+  flex-wrap: wrap;
 }
 .about-me .content ul i {
   font-size: 16px;
   margin-right: 5px;
   color: var(--color-primary);
   line-height: 0;
+}
+.about-me .content ul li .personal-info {
+  display: inline-block;
+  margin-left: 10px;
+}
+.about-me .content ul li .line-break {
+  display: none;
+  width: 100%;
 }
 .about-me .content p:last-child {
   margin-bottom: 0;
@@ -398,6 +424,22 @@ section .container {
 }
 .about-me .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
+}
+
+@media (max-width: 400px) {
+  .about-me .content h3 {
+    font-size: 22px;
+    font-weight: 500px;
+  }
+  .about-me .content ul li{
+    font-size: 14px;
+  }
+  .about-me .content ul li .personal-info {
+    margin-left: 22px;
+  }
+  .about-me .content ul li .line-break {
+    display: block;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -691,8 +733,6 @@ section .container {
 # Portfolio
 --------------------------------------------------------------*/
 .portfolio #portfolio-flters {
-  padding: 0;
-  margin: 0 auto 15px auto;
   list-style: none;
   text-align: center;
   border-radius: 50px;
@@ -701,7 +741,7 @@ section .container {
 .portfolio #portfolio-flters li {
   cursor: pointer;
   display: inline-block;
-  padding: 8px 16px 10px 16px;
+  padding: 10px 16px 10px 16px;
   font-size: 14px;
   font-weight: 600;
   line-height: 1;
@@ -796,33 +836,25 @@ section .container {
 .portfolio .portfolio-wrap:hover .portfolio-info {
   opacity: 1;
 }
-.portfolio .portfolio-wrap:hover .portfolio-info::before {
-  top: 15px;
-  left: 15px;
-}
-.portfolio .portfolio-wrap:hover .portfolio-info::after {
-  bottom: 15px;
-  right: 15px;
-}
-.portfolio-subtitle {
+.portfolio .portfolio-wrap .portfolio-info .portfolio-subtitle {
   color: #ffffff;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
   margin: 0;
 }
-.portfolio .portfolio-wrap .portfolio-links {
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links {
   text-align: center;
   z-index: 4;
 }
-.portfolio .portfolio-wrap .portfolio-links a {
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a {
   color: #fff;
   margin: 0 2px;
   font-size: 28px;
   display: inline-block;
   transition: 0.3s;
 }
-.portfolio .portfolio-wrap .portfolio-links a:hover {
+.portfolio .portfolio-wrap .portfolio-info .portfolio-links a:hover {
   color: var(--color-lighter);
 }
 .portfolio .portfolio-wrap .portfolio-info .portfolio-caption {
@@ -835,17 +867,62 @@ section .container {
   margin-top: 10px;
   margin-bottom: 5px;
 }
-.portfolio .portfolio-wrap .portfolio-info .portfolio-skills a{
+.portfolio .portfolio-wrap .portfolio-info .portfolio-skills a {
   color: var(--color-lightest);
   background-color: #7e57c2b6;
   transition: all 0.2s ease-in-out;
   font-size: 12px;
-  margin: 0px 1px;
+  margin: 2px 1px;
   padding: 4px 6px;
 }
 .portfolio .portfolio-wrap .portfolio-info .portfolio-skills a:hover {
   color: #fff;
   background-color: var(--color-primary);
+}
+
+@media (max-width: 399.99px) {
+  .portfolio #portfolio-flters li {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 0.9;
+    padding: 10px 14px 8px 14px;
+    margin: 0 2px 10px 2px;
+  }
+  .portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 5px;
+    left: 5px;
+  }
+  .portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 5px;
+    right: 5px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info h4 {
+    margin-bottom: 3px;
+    font-size: 16px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info .portfolio-subtitle {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info .portfolio-caption {
+    font-size: 11px;
+  }
+  .portfolio .portfolio-wrap .portfolio-info .portfolio-skills {
+    margin-top: 3px;
+    margin-bottom: 0px;
+  }
+}
+
+@media (min-width: 400px) {
+  .portfolio .portfolio-wrap:hover .portfolio-info::before {
+    top: 15px;
+    left: 15px;
+  }
+  .portfolio .portfolio-wrap:hover .portfolio-info::after {
+    bottom: 15px;
+    right: 15px;
+  }
 }
 /*--------------------------------------------------------------
 # Portfolio Details
@@ -860,17 +937,11 @@ section .container {
   bottom: 0;
   overflow-y: auto;
 }
-.portfolio-details .container {
-  
-}
 .portfolio-details .portfolio-title {
   font-size: 26px;
   font-weight: 700;
   margin-bottom: 15px;
   display: inline;
-}
-.portfolio-details .portfolio-info {
-  
 }
 .portfolio-details .portfolio-info h3, .portfolio-details .portfolio-info div h3 {
   font-size: 21px;
@@ -891,11 +962,6 @@ section .container {
   font-size: 15px;
 
 }
-@media (max-width: 992px) {
-  .portfolio-details .portfolio-info {
-    
-  }
-}
 .portfolio-details .swiper-pagination {
   margin-top: 20px;
   position: relative;
@@ -909,29 +975,23 @@ section .container {
 .portfolio-details .swiper-pagination .swiper-pagination-bullet-active {
   background-color: var(--color-primary);
 }
-
 .portfolio-details .portfolio-details-overview{
   font-style: italic;
 }
-
 .portfolio-details .portfolio-details-section {
   margin-bottom: 10px;
 }
-
 .portfolio-details .details-skills, 
 .portfolio-details .details-tech, 
 .portfolio-details .details-team ul li {
   list-style: none;
 }
-
 .portfolio-details .details-team li span {
   color: var(--color-primary);
 }
-
 .portfolio-details .portfolio-details-links {
   display: inline-flex;
 }
-
 .portfolio-details .portfolio-details-links a {
   font-size: 18px;
   display: flex;
@@ -946,12 +1006,10 @@ section .container {
   height: 40px;
   transition: all 0.2s;
 }
-
 .portfolio-details .portfolio-details-links a:hover {
   background: var(--color-primary);
   color: #fff;
 }
-
 .portfolio-details .details-skills li::before, .details-tech li::before {
   content: "\25CF";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--color-lighter); /* Change the color */
@@ -960,11 +1018,9 @@ section .container {
   width: 1.25em; /* Also needed for space (tweak if needed) */
   margin-left: -1.25em; /* Also needed for space (tweak if needed) */
 }
-
 .portfolio-details .details-skills .sublist li {
   list-style: none;
 }
-
 .portfolio-details .details-skills .sublist li::before{
   content: "\2023";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
   color: var(--color-lightest); /* Change the color */
@@ -973,7 +1029,6 @@ section .container {
   width: 1em; /* Also needed for space (tweak if needed) */
   margin-left: -1em; /* Also needed for space (tweak if needed) */
 }
-
 
 /*--------------------------------------------------------------
 # Contact
@@ -1122,7 +1177,41 @@ section .container {
 /*--------------------------------------------------------------
 # Modal
 --------------------------------------------------------------*/
-
 #permissionModal  #requestBtn {
   background-color: var(--color-primary);
 }
+
+.modal .modal-header .close-btn {
+  cursor: pointer;
+  color: #aaaaaa;
+  transition: all 0.2s;
+}
+
+.modal .modal-header .close-btn:hover {
+  color: whitesmoke;
+}
+
+.modal .modal-body p {
+  font-style: italic;
+  color: #999;
+}
+
+.modal .modal-footer .no-btn , .modal .modal-footer .yes-btn {
+  background-color: var(--color-primary);
+  color: whitesmoke;
+  transition: all 0.2s;
+}
+
+.modal .modal-footer .no-btn:hover, .modal .modal-footer .yes-btn:hover {
+  background-color: var(--color-lightest);
+  color: white;
+}
+
+@media (max-width: 575.99px) {
+  .modal .modal-footer .btn {
+    width: 100%;
+
+    max-width: 25rem;
+  }
+}
+

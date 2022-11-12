@@ -84,19 +84,11 @@
               MDBootstrap framework in order to create a responsive application.                
             </p>
 
-            <p>
-              One can create an account or use my account's admin credentials to sign in to the web app:
-              <ul>
-                <li><strong>Username</strong>: tmachnac</li>
-                <li><strong>Password</strong>: password</li>
-              </ul>
-            </p>
-           
             <p><span><strong>Date: </strong></span>Winter 2021</p>
 
             <div class="portfolio-details-links"> <!--action buttons-->
-              <a href="https://github.com/tmachnacki/insta" title="Code Repository"><i class="bx bx-code-alt"></i></a>
-              <a href="http://ec2-44-212-2-242.compute-1.amazonaws.com" title="Live Demo"><i class="bx bx-podcast"></i></a>
+              <a href="" class="details-modal-trigger" title="Source Code" data-details-url="https://drive.google.com/drive/folders/1K5dDVtgZfcmMvH_DUPFXYlOvavzUS3Ch?usp=sharing" data-bs-toggle="modal" data-bs-target="#details-modal"><i class="bx bx-code-alt"></i></a>
+              <a href="http://ec2-44-212-2-242.compute-1.amazonaws.com" target="_blank" title="Live Demo"><i class="bx bx-podcast"></i></a>
             </div>
           </div><!--overview col-->
         </div> <!--end top row-->
@@ -151,6 +143,35 @@
       </div> <!--end container-->
     </div><!-- End Portfolio Details -->
   </main><!-- End #main -->
+
+  <!--=== Request Access Modal for details lightbox ===-->
+  <div class="modal fade details-modal" id="details-modal" tabindex="-1" aria-labelledby="detailsModalLabel" aria-hidden="true">
+    <div class="modal-dialog ">
+      <div class="modal-content bg-dark">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="detailsModalLabel" style="color: var(--color-lighter);"">Permission Required</h1>
+          <i class="bx bx-x fs-2 close-btn" data-bs-dismiss="modal" aria-label="Close"></i>
+        </div>
+        <div class="modal-body">
+          <h6 style="font-size: 18px;">Have you requested access already?</h6>
+          <p>
+            Due to University of Michigan's academic integrity and honor code policies, source code for several projects must remain private.
+          </p>
+          <p>
+            Please use the "contact" section or my direct email to send an email containing the project of interest and your google account that should be given access.
+          </p>
+          <p>
+            Thanks
+          </p>
+        </div>
+        <div class="modal-footer d-flex flex-column flex-sm-row justify-content-center justify-content-sm-end align-items-center">
+          <button type="button" id="no-btn" class="btn no-btn d-sm-inline-block" data-bs-dismiss="modal">No, Not Yet</button>
+          <a href="https://drive.google.com/drive/folders/1K5dDVtgZfcmMvH_DUPFXYlOvavzUS3Ch?usp=sharing"  target="_blank" id="yes-btn" class="btn yes-btn d-sm-inline-block">Yes, Continue</a>
+          <button type="button" class="btn btn-secondary d-sm-inline-block" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/purecounter/purecounter.js"></script>

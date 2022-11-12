@@ -7,9 +7,9 @@
   const select = (el, all = false) => {
     el = el.trim()
     if (all) {
-      return [...document.querySelectorAll(el)]
+      return [...window.document.querySelectorAll(el)]
     } else {
-      return document.querySelector(el)
+      return window.document.querySelector(el)
     }
   }
 
@@ -148,7 +148,6 @@
     }
   });
 
-
   /**
    * Skills animation
    */
@@ -165,38 +164,6 @@
       }
     })
   }
-
-  /**
-   * Testimonials slider
-   */
-
-  /*
-  new Swiper('.testimonials-slider', {
-    speed: 600,
-    loop: true,
-    autoplay: {
-      delay: 5000,
-      disableOnInteraction: false
-    },
-    slidesPerView: 'auto',
-    pagination: {
-      el: '.swiper-pagination',
-      type: 'bullets',
-      clickable: true
-    },
-    breakpoints: {
-      320: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      },
-
-      1200: {
-        slidesPerView: 3,
-        spaceBetween: 20
-      }
-    }
-  });
-  */
 
   /**
    * Porfolio isotope and filter
@@ -276,23 +243,53 @@
   }
 
   /** 
-  * permission modal
-  */
-  let closeBtn = document.getElementById('closeBtn');
-  let modalTriggers = document.getElementsByClassName('modal-trigger');
-  console.log(modalTriggers);
+  * request permission modal
+  */ 
+  // Yes button ==> edit redirect href to match correct link
+  // No button  ==> go to contact section
+  let modalNoBtn = select('.modal .modal-dialog .modal-content .modal-footer .no-btn');
+  if (modalNoBtn) {
+    modalNoBtn.addEventListener('click', function(e){
+      e.preventDefault();
+  
+      let navlinks = select('#navbar .nav-link', true);
+      if (navlinks) {
+        navlinks.forEach((item) => {
+          item.classList.remove('active')
+        });
+      }
+      
+      let sections = select('section', true);
+      if (sections) {
+        sections.forEach((item) => {
+          item.classList.remove('section-show')
+        });
+      }
+  
+      let contactNav = select('#navbar .nav-contact');
+      if (contactNav) {
+        contactNav.classList.add('active')
+      }
 
-  let continueBtn = document.getElementById('continueBtn');
+      let contactSection = select('#contact');
+      if (contactSection) {
+        contactSection.classList.add('section-show');
+      }
+    });
+  }
 
-  modalTriggers.forEach(e => e.addEventListener('click', function() {
-      console.log(e.dataset.url.toString());
-      continueBtn.setAttribute('href', e.dataset.url.toString());
-    }
-  ));
-
-
+  let modalTriggers = select('#portfolio .modal-trigger', true);
+  let modalYesBtn = select('.modal .modal-dialog .modal-content .modal-footer .yes-btn');
+  if (modalTriggers && modalYesBtn) {
+    modalTriggers.forEach(e => e.addEventListener('click', function() {
+      const targetUrl = e.dataset.url.toString();
+      modalYesBtn.setAttribute('href', targetUrl);
+    }));
+  }
 
 })()
+
+
 
 
 
