@@ -1190,6 +1190,9 @@ section .container {
 .modal .modal-header .close-btn:hover {
   color: whitesmoke;
 }
+.modal .modal-body h6 {
+  font-size: 18px;
+}
 
 .modal .modal-body p {
   font-style: italic;
@@ -1210,7 +1213,6 @@ section .container {
 @media (max-width: 575.99px) {
   .modal .modal-footer .btn {
     width: 100%;
-
     max-width: 25rem;
   }
 }
