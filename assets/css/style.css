@@ -1042,6 +1042,13 @@ section .container {
   .contact .info-box .divider {
     display: none;
   }
+  .contact .info-box .social-links{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact .info-box .social-links a {
+    width: max-content;
+  }
 }
 
 /*--------------------------------------------------------------
