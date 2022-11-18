@@ -775,7 +775,7 @@
         </div>
       </div>
 
-      <form action="forms/contact.php" method="post" role="form" class="php-email-form mt-4">
+      <form id="my-form" action="https://formspree.io/f/mgeqqvqe" method="POST" role="form" class="php-email-form mt-4">
         <div class="row">
           <div class="col-md-6 form-group">
             <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -843,6 +843,50 @@
 
   <!--Main JS File -->
   <script src="assets/js/main.js"></script>
+
+  <!--FormSpree contact form -->
+  <script>
+    var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      form.querySelector('.loading').classList.add('d-block');
+      form.querySelector('.error-message').classList.remove('d-block');
+      form.querySelector('.sent-message').classList.remove('d-block');
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        form.querySelector('.loading').classList.remove('d-block');
+        if (response.ok) {
+          form.querySelector('.sent-message').classList.add('d-block');
+          form.reset();
+          setTimeout(() => {
+            form.querySelector('.sent-message').classList.remove('d-block');
+          }, 5000);
+        } else {
+          response.json().then(data => {
+            form.querySelector('.error-message').classList.remove('d-block');
+            if (Object.hasOwn(data, 'errors')) {
+              form.querySelector('.error-message').innerHTML = data["errors"].map(error => error["message"]).join(", ");
+            } else {
+              form.querySelector('.error-message').innerHTML = "Oops! There was a problem submitting your form";
+            }
+            form.querySelector('.error-message').classList.add('d-block');
+          })
+        }
+      }).catch(error => {
+        form.querySelector('.error-message').classList.remove('d-block');
+        form.querySelector('.error-message').innerHTML = error;
+        form.querySelector('.error-message').classList.add('d-block');
+      });
+    }
+    form.addEventListener("submit", handleSubmit);
+</script>
 </body>
 
 </html>

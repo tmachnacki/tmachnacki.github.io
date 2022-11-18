@@ -944,7 +944,7 @@ section .container {
 .contact .php-email-form .sent-message {
   display: none;
   background: rgba(255, 255, 255, 0.08);
-  background: var(--color-primary);
+  background: var(--color-lighter);
   text-align: center;
   padding: 15px;
   font-weight: 600;
