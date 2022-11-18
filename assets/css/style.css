@@ -33,6 +33,13 @@ body::before {
     background-attachment: fixed;
   }
 }
+@media (max-width: 576px) {
+  body::before {
+    background: #040404 url("../img/profile-edit-4.jpg") 25% 50% no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+}
 
 a {
   color: var(--color-primary);
