@@ -35,7 +35,7 @@ body::before {
 }
 @media (max-width: 576px) {
   body::before {
-    background: #040404 url("../img/profile-edit-4.jpg") 25% 50% no-repeat;
+    background: #040404 url("../img/profile-edit-4.jpg") 30% 50% no-repeat;
     background-attachment: fixed;
     background-size: cover;
   }
@@ -171,8 +171,6 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
-#header .navbar 
-
 
 /*--------------------------------------------------------------
 # Navigation Menu
@@ -263,6 +261,9 @@ h1, h2, h3, h4, h5, h6 {
 
   .navbar ul {
     display: none;
+  }
+  .navbar {
+    margin-top: 0;
   }
 }
 .navbar-mobile {
